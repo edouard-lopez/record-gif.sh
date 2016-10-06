@@ -33,7 +33,7 @@ countdown() {
       printf "%s\b" "$i"
       sleep 1
   done
-  printf "\n"
+  printf "\r"
 }
 
 progress-bar() {
@@ -56,7 +56,7 @@ progress-bar() {
 remove_existing() {
   if [[ -f $save_as ]]; then
     rm $save_as
-    printf "Existing record will be overwritten\n"
+    printf "Existing record will be overwritten.\n"
   fi
 }
 
@@ -69,13 +69,14 @@ create_replay() {
   chmod u+x ./record.again
 }
 run() {
-  printf "Recording for %ss\nsaving in %s\n" "$duration" "$save_as"
+  printf "Saving in %s%s\n" "$save_as"
+  remove_existing
+  printf "Recording for %ss.\n\n" "$duration"
   printf "Select Area to record…\n"
 
-  remove_existing
   seletected_area="$(select_area "$area")"
-  notify "Start…"
   countdown $delay
+  notify "Recording…                        "
 
   progress-bar $duration &
   create_replay "$seletected_area" "$duration" "$save_as"
