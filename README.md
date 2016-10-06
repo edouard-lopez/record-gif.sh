@@ -1,6 +1,6 @@
 ## Byzanz-gui
 
-> a lame GUI for `byzanz`, but I improved the user experience and the code for better readability.
+> A lame GUI for `byzanz`, improved the user experience (mouse-selectable area, record progressbar, **replay-able recording**).
 
 ![preview](./preview.gif)
 
