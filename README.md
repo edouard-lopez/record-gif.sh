@@ -4,6 +4,13 @@
 
 ![preview](./preview.gif)
 
+### Features
+
+* set recording `duration` ;
+* set `save_as` destination ;
+* **select –with the mouse–** the area to record ;
+* **create a script to replay recording** (cf. `$HOME/record.again`).
+
 ### Requirement
 
 * [`xrectsel`](https://github.com/lolilolicon/xrectsel)
@@ -16,7 +23,7 @@ curl --location --output byzanz-gui https://github.com/edouard-lopez/byzanz-gui/
 
 ### Progress bar
 
-The code is available on on my repo [edouard-lopez/progress-bar.sh](https://github.com/edouard-lopez/progress-bar.sh) so you can use it in others cases.
+It's a self made script, the code is available on my repo [edouard-lopez/progress-bar.sh](https://github.com/edouard-lopez/progress-bar.sh) so you can use it in others cases.
 
 ### License
 
