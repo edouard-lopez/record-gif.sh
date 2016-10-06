@@ -11,14 +11,12 @@
 * **select –with the mouse–** the area to record ;
 * **create a script to replay recording** (cf. `$HOME/record.again`).
 
-### Requirement
-
-* [`xrectsel`](https://github.com/lolilolicon/xrectsel)
-
 ### Install
 
+Requirement [`xrectsel`](https://github.com/lolilolicon/xrectsel) is installed by the script.
+
 ```
-curl --location --output byzanz-gui curl --location --output https://github.com/edouard-lopez/byzanz-gui/blob/master/install.sh | bash -
+curl --location https://git.io/byzanz-gui.sh | bash -
 ```
 
 ### Progress bar

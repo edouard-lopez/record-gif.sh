@@ -11,6 +11,6 @@ make DESTDIR="/tmp/xrectsel" install
 sudo cp xrectsel /usr/bin/xrectsel
 
 echo Installing edouard-lopez/byzanz-gui
-curl --location --output https://github.com/edouard-lopez/byzanz-gui/blob/master/byzanz-gui /tmp/byzanz-gui
-cd /tmp/byzanz-gui
-sudo cp /tmp/byzanz-gui/byzanz-gui /usr/bin/byzanz-gui
+curl --location https://github.com/edouard-lopez/byzanz-gui/raw/master/byzanz-gui --output /tmp/byzanz-gui
+sudo cp /tmp/byzanz-gui /usr/local/bin/byzanz-gui
+sudo chmod +x /usr/local/bin/byzanz-gui
