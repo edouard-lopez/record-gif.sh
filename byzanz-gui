@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# Delay before starting
+#!/usr/bin/env bash
 delay=3
 duration=${1:-10}
 save_as=${2:-$HOME/recorded.gif}
