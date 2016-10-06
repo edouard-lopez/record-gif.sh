@@ -49,12 +49,18 @@ progress-bar() {
   printf "\n"
 }
 
-
+remove_existing() {
+  if [[ -f $save_as ]]; then
+    rm $save_as
+    printf "Existing record will be overwritten\n"
+  fi
+}
 
 run() {
   printf "Recording for %ss\nsaving in %s\n" "$duration" "$save_as"
   printf "Select Area to record…\n"
 
+  remove_existing
   seletected_area="$(select_area)"
   notify "Start…"
   countdown $delay
