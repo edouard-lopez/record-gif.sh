@@ -1,6 +1,8 @@
 ## Byzanz-gui
 
-> a lame GUI for byzanz, but I improved the user experience and the code for better readability.
+> a lame GUI for `byzanz`, but I improved the user experience and the code for better readability.
+
+![preview](./preview.gif)
 
 ### Requirement
 
