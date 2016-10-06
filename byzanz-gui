@@ -29,6 +29,7 @@ countdown() {
       printf "%s\b" "$i"
       sleep 1
   done
+  printf "\n"
 }
 
 progress-bar() {
@@ -45,7 +46,7 @@ progress-bar() {
       sleep 1
       clean_line
   done
-  clean_line
+  printf "\n"
 }
 
 
@@ -59,9 +60,8 @@ run() {
   countdown $delay
 
   progress-bar $duration &
-  set -x
-  byzanz-record --verbose --delay=0 ${seletected_area} --duration=$duration $save_as
-set +x
+  byzanz-record --verbose --delay=0 ${seletected_area} --duration=$duration $save_as > /dev/null
+
   notify "Finished!"
 }
 
