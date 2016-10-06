@@ -4,6 +4,7 @@
 delay=3
 duration=${1:-10}
 save_as=${2:-$HOME/recorded.gif}
+area=$(shift 2; echo "$@")
 
 notify() {
     message=${1:-''}
@@ -14,11 +15,14 @@ notify() {
 
 # xrectsel from https://github.com/lolilolicon/xrectsel
 select_area() {
-  local region
+  local area
+  area="${1}"
 
-  region=$(xrectsel "--x=%x --y=%y --width=%w --height=%h") || exit -1
+  if [[ -z "$area" ]]; then
+    area=$(xrectsel "--x=%x --y=%y --width=%w --height=%h") || exit -1
+  fi
 
-  echo $region
+  echo $area
 }
 
 countdown() {
@@ -56,16 +60,25 @@ remove_existing() {
   fi
 }
 
+create_replay() {
+  local seletected_area="$1"
+  local duration=$2
+  local save_as=$3
+
+  echo "byzanz-gui $duration $save_as ${seletected_area}" >> $HOME/record.again
+  chmod u+x ./record.again
+}
 run() {
   printf "Recording for %ss\nsaving in %s\n" "$duration" "$save_as"
   printf "Select Area to record…\n"
 
   remove_existing
-  seletected_area="$(select_area)"
+  seletected_area="$(select_area "$area")"
   notify "Start…"
   countdown $delay
 
   progress-bar $duration &
+  create_replay "$seletected_area" "$duration" "$save_as"
   byzanz-record --verbose --delay=0 ${seletected_area} --duration=$duration $save_as > /dev/null
 
   notify "Finished!"
