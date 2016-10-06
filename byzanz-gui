@@ -76,10 +76,11 @@ run() {
 
   seletected_area="$(select_area "$area")"
   countdown $delay
+  create_replay "$seletected_area" "$duration" "$save_as"
+  printf "You can replay this recording by running: \n  $ bash %s\n\n" "$HOME/record.again"
   notify "Recording…                        "
 
   progress-bar $duration &
-  create_replay "$seletected_area" "$duration" "$save_as"
   byzanz-record --verbose --delay=0 ${seletected_area} --duration=$duration $save_as > /dev/null
 
   notify "Finished!"
