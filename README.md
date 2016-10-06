@@ -18,7 +18,7 @@
 ### Install
 
 ```
-curl --location --output byzanz-gui https://github.com/edouard-lopez/byzanz-gui/blob/master/byzanz-gui
+curl --location --output byzanz-gui curl --location --output https://github.com/edouard-lopez/byzanz-gui/blob/master/install.sh | bash -
 ```
 
 ### Progress bar
