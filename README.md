@@ -1,4 +1,4 @@
-## Byzanz-gui
+## Record-gif
 
 > A lame GUI for `byzanz`, improved the user experience (mouse-selectable area, record progressbar, **replay-able recording**).
 
@@ -16,7 +16,7 @@
 Requirement [`xrectsel`](https://github.com/lolilolicon/xrectsel) is installed by the script.
 
 ```
-curl --location https://git.io/byzanz-gui.sh | bash -
+curl --location https://git.io/record-gif.sh | bash -
 ```
 
 ### Progress bar
