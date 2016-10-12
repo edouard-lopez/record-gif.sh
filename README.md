@@ -1,6 +1,6 @@
 ## Record-gif
 
-> A lame GUI for `byzanz`, improved the user experience (mouse-selectable area, record progressbar, **replay-able recording**).
+> A lame GUI for [`byzanz`](https://github.com/GNOME/byzanz), improved the user experience (**mouse-selectable area**, record progress bar, **replay-able recording**).
 
 ![preview](./preview.gif)
 
@@ -25,4 +25,4 @@ It's a self made script, the code is available on my repo [edouard-lopez/progres
 
 ### License
 
-GPLv3
+> [GPLv3](http://choosealicense.com/licenses/gpl-3.0/) inherited from [byzanz-record-window](https://askubuntu.com/questions/107726/how-to-create-animated-gif-images-of-a-screencast/201018#201018).
