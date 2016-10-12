@@ -63,7 +63,7 @@ create_replay() {
   local duration=$2
   local save_as=$3
 
-  echo "byzanz-gui $duration $save_as ${seletected_area}" > $HOME/record.again
+  echo "record-gif.sh $duration $save_as ${seletected_area}" > $HOME/record.again
   chmod u+x ./record.again
 }
 run() {
