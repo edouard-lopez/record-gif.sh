@@ -10,7 +10,7 @@ make
 make DESTDIR="/tmp/xrectsel" install
 sudo cp xrectsel /usr/bin/xrectsel
 
-echo Installing edouard-lopez/byzanz-gui
-curl --location https://github.com/edouard-lopez/byzanz-gui/raw/master/byzanz-gui --output /tmp/byzanz-gui
-sudo cp /tmp/byzanz-gui /usr/local/bin/byzanz-gui
-sudo chmod +x /usr/local/bin/byzanz-gui
+echo Installing edouard-lopez/record-gif.sh
+curl --location https://github.com/edouard-lopez/record-gif.sh/raw/master/record-gif.sh --output /tmp/record-gif.sh
+sudo cp /tmp/record-gif.sh /usr/local/bin/record-gif.sh
+sudo chmod +x /usr/local/bin/record-gif.sh
