@@ -4,11 +4,17 @@ duration=${1:-10}
 save_as=${2:-$HOME/recorded.gif}
 area=$(shift 2; echo "$@")
 
+start_audio=/usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+end_audio=/usr/share/sounds/freedesktop/stereo/complete.oga
+
 notify() {
     message=${1:-''}
+    audio="${2}"
 
-    printf "%s\n" "$message"
-    paplay /usr/share/sounds/KDE-Im-Irc-Event.ogg &
+    echo "$message"
+    if [[ -f $audio ]]; then
+      paplay $audio &
+    fi
 }
 
 # xrectsel from https://github.com/lolilolicon/xrectsel
@@ -76,12 +82,12 @@ run() {
   countdown $delay
   create_replay "$seletected_area" "$duration" "$save_as"
   printf "You can replay this recording by running: \n  $ bash %s\n\n" "$HOME/record.again"
-  notify "Recording…                        "
+  notify "Recording…                        " "$start_audio"
 
   progress-bar $duration &
   byzanz-record --verbose --delay=0 ${seletected_area} --duration=$duration $save_as > /dev/null
 
-  notify "Finished!"
+  notify "Finished!" "$end_audio"
 }
 
 run
