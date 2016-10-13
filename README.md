@@ -11,9 +11,13 @@
 * **select –with the mouse–** the area to record ;
 * **create a script to replay recording** (cf. `$HOME/record.again`).
 
-### Install
+## Requirements
 
-Requirement [`xrectsel`](https://github.com/lolilolicon/xrectsel) is installed by the script.
+* `byzanz` (probably in your repo) ;
+* [`xrectsel`](https://github.com/lolilolicon/xrectsel) is installed by the script.
+
+
+## Install
 
 ```
 curl --location https://git.io/record-gif.sh | bash -
