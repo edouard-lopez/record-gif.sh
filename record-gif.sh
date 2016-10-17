@@ -69,8 +69,8 @@ create_replay() {
   local duration=$2
   local save_as=$3
 
-  echo "record-gif.sh $duration $save_as ${seletected_area}" > $HOME/record.again
-  chmod u+x $HOME/record.again
+  echo "record-gif.sh $duration $save_as ${seletected_area}" > $HOME/.record.again
+  chmod u+x $HOME/.record.again
 }
 run() {
   printf "Saving in %s%s\n" "$save_as"
@@ -81,7 +81,7 @@ run() {
   seletected_area="$(select_area "$area")"
   countdown $delay
   create_replay "$seletected_area" "$duration" "$save_as"
-  printf "You can replay this recording by running: \n  $ bash %s\n\n" "$HOME/record.again"
+  printf "You can replay this recording by running: \n  $ bash %s\n\n" "$HOME/.record.again"
   notify "Recording…                        " "$start_audio"
 
   progress-bar $duration &

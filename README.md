@@ -10,7 +10,7 @@
 * set recording `duration` ;
 * set `save_as` destination ;
 * **select –with the mouse–** the area to record ;
-* **create a script to replay recording** (cf. `$HOME/record.again`).
+* **create a script to replay recording** (cf. `$HOME/.record.again`).
 
 ## Requirements
 
@@ -36,7 +36,7 @@ This will record for `10s`, and save GIF in `~/preview.gif`. If the file exists 
 
 You know cause the first time always fails, I save the command from **last session that completed** to record easily record again:
 
-    ~/record.again
+    ~/.record.again
 
 This will record, after 3s delay as always, with the same `duration`, `destination` and `area`.
 
