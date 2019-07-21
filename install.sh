@@ -11,7 +11,7 @@ sh ./configure --prefix /usr
 sudo apt-get install libx11-dev
 make
 make DESTDIR="/tmp/xrectsel" install
-sudo cp xrectsel /usr/bin/xrectsel
+sudo cp usr/bin/xrectsel /usr/bin/xrectsel
 
 echo Installing edouard-lopez/record-gif.sh
 curl --location https://github.com/edouard-lopez/record-gif.sh/raw/master/record-gif.sh --output /tmp/record-gif.sh
