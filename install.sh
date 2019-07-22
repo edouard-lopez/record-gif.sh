@@ -3,6 +3,9 @@
 echo Installing byzanz
 sudo apt-get install autoconf byzanz
 
+echo Installing missing packages
+sudo apt-get install automake libtool
+
 echo Installing lolilolicon/xrectsel and dependencies
 git clone --depth 1 https://github.com/lolilolicon/xrectsel.git /tmp/xrectsel
 cd /tmp/xrectsel
