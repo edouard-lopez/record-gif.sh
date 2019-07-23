@@ -8,7 +8,7 @@ git clone --depth 1 https://github.com/lolilolicon/xrectsel.git /tmp/xrectsel
 cd /tmp/xrectsel
 sh ./bootstrap
 sh ./configure --prefix /usr
-sudo apt-get install libx11-dev
+sudo apt-get install libx11-dev automake libtool
 make
 make DESTDIR="/tmp/xrectsel" install
 sudo cp xrectsel /usr/bin/xrectsel
