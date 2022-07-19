@@ -69,7 +69,7 @@ create_replay() {
   local duration=$2
   local save_as=$3
 
-  echo "record-gif.sh $duration $save_as ${seletected_area}" > $HOME/.record.again
+  echo "$0 $duration $save_as ${seletected_area}" > $HOME/.record.again
   chmod u+x $HOME/.record.again
 }
 run() {
