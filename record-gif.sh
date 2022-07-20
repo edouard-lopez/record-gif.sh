@@ -67,9 +67,10 @@ remove_existing() {
 create_replay() {
   local seletected_area="$1"
   local duration=$2
-  local save_as=$3
+  local save_as="$3"
+  local executable="$0"
 
-  echo "$0 $duration $save_as ${seletected_area}" > $HOME/.record.again
+  echo "$executable $duration $save_as ${seletected_area}" > $HOME/.record.again
   chmod u+x $HOME/.record.again
 }
 run() {
